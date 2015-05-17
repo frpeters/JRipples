@@ -1,0 +1,6 @@
+org.severe.jripples.constants
+org.severe.jripples.core
+org.severe.jripples.eig
+org.severe.jripples.logging
+org.severe.jripples.modules.interfaces
+org.severe.jripples.modules.manager

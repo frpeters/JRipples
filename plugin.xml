@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+     <extension-point id="modules" name="JRipples modules extension point" schema="schema/modules.exsd"/>
+   <extension
+         id="org.severe.jripples.mainmenu"
+         name="Main JRipples menu"
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="JRipples main menu"
+            id="JRipples.actionSet1"
+            label="JRipples"
+            visible="true">
+         <menu
+               label="JRipples"
+               id="JRipples.menu1">
+            <groupMarker name="JRipples.groupMarker1"/>
+            <separator name="JRipples.separator1"/>
+            <groupMarker name="JRipples.StatesGroup"/>
+            <separator name="JRipples.separator2"/>
+            <groupMarker name="JRipples.ImportExportGroup"/>
+            <separator name="JRipples.separator3"/>
+            <groupMarker name="JRipples.ModulesGroup"/>
+            <separator name="JRipples.separator4"/>
+            <groupMarker name="JRipples.Additions"/>
+            <separator name="JRipples.separator5"/>
+            <groupMarker name="JRipples.ConfigurationGroup"/>
+         </menu>
+         <action
+               class="org.severe.jripples.core.JRipplesStart"
+               helpContextId="org.severe.help.jripples_start_analysis"
+               icon="icons/lrun_obj.gif"
+               id="JRipples.Start"
+               label="Start analysis"
+               menubarPath="JRipples.menu1/JRipples.groupMarker1"
+               style="push"
+               tooltip="Start JRipples Analysis"/>
+         <action
+               class="org.severe.jripples.core.JRipplesConfigurationLoadAction"
+               helpContextId="org.severe.help.jripples_states"
+               icon="icons/bfolder_obj.gif"
+               id="JRipples.loadAction"
+               label="Load State"
+               menubarPath="JRipples.menu1/JRipples.StatesGroup"
+               style="push"/>
+         <action
+               class="org.severe.jripples.core.JRipplesConfigurationSaveAction"
+               helpContextId="org.severe.help.jripples_states"
+               icon="icons/bkmrk_nav.gif"
+               id="JRipples.saveAction"
+               label="Save State"
+               menubarPath="JRipples.menu1/JRipples.StatesGroup"
+               style="push"/>
+            
+         <action
+               class="org.severe.jripples.core.JRipplesConfigurationManageAction"
+               helpContextId="org.severe.help.jripples_states"
+               icon="icons/history_obj.gif"
+               id="JRipples.manageAction"
+               label="Manage States"
+               menubarPath="JRipples.menu1/JRipples.StatesGroup"
+               style="push"/>
+         <action
+               class="org.severe.jripples.states.JRipplesStats"
+               icon="icons/preview.gif"
+               id="JRipples.stats"
+               label="Current state - Statistics"
+               menubarPath="JRipples.menu1/JRipples.StatesGroup"
+               style="push">
+         </action>
+         <action
+               class="org.severe.jripples.modules.manager.ConfigurationAction"
+               helpContextId="org.severe.help.jripples_configuration_action"
+               icon="icons/jrconfig.gif"
+               id="JRipples.configurationaction"
+               label="Configuration..."
+               state="true"
+               style="pulldown"
+               toolbarPath="JRipples.menu1/diff"/>
+         <menu
+               id="JRipples.ImportExportMenu"
+               label="Import / Export"
+               path="JRipples.menu1/JRipples.ImportExportGroup">
+            <groupMarker name="JRipples.ImportExportMenu.groupMarker2"/>
+         </menu>             
+      </actionSet>
+   </extension>
+   <extension
+         id="org.severe.jripples.exportwizards"
+         name="JRipples export wizards"
+         point="org.eclipse.ui.exportWizards">
+      <category
+            id="org.severe.jripples.exportcategory"
+            name="JRipples"/>
+   </extension>
+   <extension
+         id="org.severe.jripples.importwizards"
+         name="JRipples import wizards"
+         point="org.eclipse.ui.importWizards">
+      <category
+            id="org.severe.jripples.importcategory"
+            name="JRipples"/>
+   </extension>
+   <extension
+         id="org.severe.jripples.preferences.pages"
+         name="JRipples preference pages"
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.severe.jripples.preferences.MainJRipplesPreferencePage"
+            id="org.severe.jripples.preferences"
+            name="JRipples">
+      </page>
+   </extension>
+   <extension
+         id="org.severe.jripples.preferences.initializers"
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.severe.jripples.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   
+</plugin>

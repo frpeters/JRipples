@@ -231,24 +231,9 @@ public final class JRipplesEIG {
 	 * @see #getAllNodes()
 	 */
 	public static boolean isInitialized() {
-		if (getProject() == null) {
+		if (getProject() == null || getMainClass() == null || nodes == null || nodes.size() == 0) {
 			return false;
-		}
-		;
-		if (getMainClass() == null) {
-			return false;
-		}
-		;
-		if (nodes == null) {
-			return false;
-		}
-		;
-
-		if (nodes.size() == 0) {
-			return false;
-		}
-		;
-
+		};
 		return true;
 	}
 

@@ -101,15 +101,15 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 	 */
 
 	public String getFullName() {
-		String fullName;
-		if(nodeMember==null) return "";
-		if (nodeMember instanceof IType) fullName=((IType) nodeMember).getFullyQualifiedName();
-			else {fullName=JRipplesIMemberServices.getTopDeclaringType(nodeMember).getFullyQualifiedName()+"::"+nodeMember.getElementName();
-			
-			}
-		
-		if (fullName!=null) return fullName;
-		return "";
+		String fullName="";
+		if (nodeMember instanceof IType) {
+			fullName=((IType) nodeMember).getFullyQualifiedName();
+		}
+		else if(nodeMember!=null){
+			fullName=JRipplesIMemberServices.getTopDeclaringType(nodeMember).getFullyQualifiedName()+"::"+nodeMember.getElementName();
+		}
+		if(fullName==null){ fullName="";}
+		return fullName;
 	}
 
 	/**

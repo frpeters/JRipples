@@ -75,12 +75,14 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 	 */
 	
 	public String getShortName() {
-	
-		if(nodeMember==null) return "";
-		String name=nodeMember.getElementName();
-		if (name!=null) return name;
-		return "";
-		
+		String name="";
+		if(nodeMember!=null){
+			if(nodeMember.getElementName()!=null){
+				name=nodeMember.getElementName();				
+			}
+		}
+		return name;
+
 	}
 
 	/**

@@ -40,8 +40,8 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 	 * Constructor - creates a node with the specified IMember and
 	 * sets node's mark and probability to empty string.<br>
 	 * Please note that nodes, created directly with the constructor, 
-	 * will not be handeleded in the EIG. To creare a node that is
-	 * handeled by the EIG, use {@link JRipplesEIG#addNode(IMember)} 
+	 * will not be handled in the EIG. To create a node that is
+	 * handled by the EIG, use {@link JRipplesEIG#addNode(IMember)} 
 	 * instead. 
 	 * 
 	 * @param member
@@ -84,14 +84,14 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 	}
 
 	/**
-	 * Returns node's fully qualified name. For if the underlying memeber is
+	 * Returns node's fully qualified name. For if the underlying member is
 	 * of type IType, the returned full name is equal to the 
 	 * fully qualified name of the node's underlying IMember. For IMethod and
 	 * IField type of IMember, the full name is composed by taking fully qualified name
 	 * of the top declaring class of this IMember, and adding the short name
 	 * of the <code>IMember<code> to it, separated by a "::" string.
 	 * 
-	 * Use {@link #getShortName()} if you need to get node's simlple name
+	 * Use {@link #getShortName()} if you need to get node's simple name
 	 * to present this node in a GUI.
 	 * 
 	 * @return fully qualified name of the underlying member if it is set, 
@@ -127,7 +127,7 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 
 	/**
 	 * Returns node's underlying {@link org.eclipse.jdt.core.IMember}  - 
-	 * the actual component of <code>IMember<code> type of the project ander analysis,
+	 * the actual component of <code>IMember<code> type of the project under analysis,
 	 * which this node represents.
 	 * 
 	 * @return underlying instance of <code>IMember<code> of the node if there is a one; <code>null</code>
@@ -226,7 +226,7 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 	}
 
 	/**
-	 * Sets node's underlying member - the actual member of the project ander
+	 * Sets node's underlying member - the actual member of the project under
 	 * analysis, which this node represents.
 	 * 
 	 * @param nodeMember

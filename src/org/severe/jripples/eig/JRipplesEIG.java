@@ -131,7 +131,7 @@ public final class JRipplesEIG {
 	}
 
 	/**
-	 * Returns an instance of JRipples EIG. JRipples EIG instance is created once the JRipples plugin is activated and remains the same throughout the plug-in lifycycle. 
+	 * Returns an instance of JRipples EIG. JRipples EIG instance is created once the JRipples plugin is activated and remains the same throughout the plug-in lifecycle. 
 	 * @return
 	 * the instance of JRipples EIG 
 	 * 
@@ -223,9 +223,9 @@ public final class JRipplesEIG {
 
 
 	/**
-	 * Checks whether the JRipples EIG is inialized for analysis - that is, whether a main project and main class are set, and whether EIG has at least one node registered with it.
+	 * Checks whether the JRipples EIG is initialized for analysis - that is, whether a main project and main class are set, and whether EIG has at least one node registered with it.
 	 * @return
-	 * <code>true</code> if the JRipples EIG is inialized for analysis, <br><code>null</code> otherwise
+	 * <code>true</code> if the JRipples EIG is initialized for analysis, <br><code>null</code> otherwise
 	 * @see #getProject()
 	 * @see #getMainClass()
 	 * @see #getAllNodes()
@@ -243,7 +243,7 @@ public final class JRipplesEIG {
 	/**
 	 * Sets a project under analysis, usually chosen through "JRipples > Start" menu.
 	 * @param proj
-	 * a project this JRipples EIG analysis reffers to
+	 * a project this JRipples EIG analysis refers to
 	 * @see #getProject()
 	 * @see #getMainClass()
 	 * @see #setMainClass(IType)
@@ -256,7 +256,7 @@ public final class JRipplesEIG {
 	/**
 	 *Returns a project under analysis, usually chosen through "JRipples > Start" menu.
 	 * @return
-	 * a project this JRipples EIG analysis reffers to
+	 * a project this JRipples EIG analysis refers to
 	 * @see #setProject(IProject)
 	 * @see #getMainClass()
 	 * @see #setMainClass(IType)
@@ -269,7 +269,7 @@ public final class JRipplesEIG {
 	/**
 	 * Sets a main class (a class to start the analysis from) of a project under analysis, usually chosen through "JRipples > Start" menu.
 	 * @param type
-	 * a main class of a project this JRipples EIG analysis reffers to
+	 * a main class of a project this JRipples EIG analysis refers to
 	 * @see #getProject()
 	 * @see #setProject(IProject)
 	 * @see #getMainClass()
@@ -283,7 +283,7 @@ public final class JRipplesEIG {
 	/**
 	 * Returns the main class (a class to start the analysis from) of a project under analysis, usually chosen through "JRipples > Start" menu.
 	 * @return
-	 * a main class of a project this JRipples EIG analysis reffers to
+	 * a main class of a project this JRipples EIG analysis refers to
 	 * @see #getProject()
 	 * @see #setProject(IProject)
 	 * @see #setMainClass(IType)

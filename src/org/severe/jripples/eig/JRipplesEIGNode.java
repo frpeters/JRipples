@@ -123,7 +123,6 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 	 */
 
 	public String getMark() {
-		if (this.mark==null) this.mark="";
 		return mark;
 	}
 
@@ -190,8 +189,8 @@ public  class JRipplesEIGNode implements IAdaptable, Comparable {
 		undoHistory.addFirst(this.getMark());
 		undoHistory.addFirst("setMark");
 		if (!JRipplesEIG.redoInProgress) clearRedoHistory();
-		
 		this.mark = mark;
+		if (this.mark==null) this.mark="";
 		JRipplesEIG
 				.fireJRipplesEIGChanged(node,
 						JRipplesEIGNodeEvent.NODE_MARK_CHANGED,
